@@ -1,0 +1,14 @@
+[Unit]
+Description=Garradin-LDAP server
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=www-data
+ExecStart=/usr/bin/env php /usr/local/share/garradin-ldap/index.php 389
+
+[Install]
+WantedBy=multi-user.target

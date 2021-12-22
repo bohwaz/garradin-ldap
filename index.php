@@ -84,9 +84,6 @@ class LdapRequestHandler extends GenericRequestHandler
 			]));
 		}
 
-		var_dump($query);
-		var_dump($entries);
-
 		return $entries;
 	}
 }
